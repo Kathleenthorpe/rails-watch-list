@@ -3,13 +3,13 @@
 <button id="new_list"><p><%= link_to 'New List', new_list_path %></p></button>
 
 
-<div class="container mt-2">
-  <div class="row">
-      <% @lists.each do |list| %>
-        <div class="col-4 mt-3">
-            <p><%= link_to list.name, list_path(list.id) %></p>
-          </div>
-        </div>
-      <% end %>
+
+
+  <% @lists.each do |list| %>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text"><%= link_to list.name, list_path(list.id) %></p>
   </div>
+      <% end %>
 </div>
